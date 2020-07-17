@@ -1,0 +1,44 @@
+### Input Service
+POST http://localhost:5001/corona
+content-type: application/json
+
+{
+ "city": "Acre",
+ "added": 50
+}
+
+### Processing Service
+POST http://localhost:5002/process
+content-type: application/json
+
+{
+ "city": "Acre",
+ "added": 2
+}
+
+### Output Service
+POST http://localhost:5003/outbreak
+content-type: application/json
+
+{
+  "data": {
+    "city": "Acre",
+    "patients": 3
+  }
+}
+
+### 
+GET http://localhost:5003/dapr/subscribe
+content-type: application/json
+
+###
+POST http://localhost:4002/v1.0/state/statestore
+content-type: application/json
+
+[{ 
+ "key": "Akko",
+ "value": {
+  "city": "Akko", 
+   "patients": 6
+ }
+}]

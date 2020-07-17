@@ -1,0 +1,8 @@
+*.pfx
+*.pem
+/demo/Dashboard
+demo/Dashboard
+demo/Dashboard/dashboard
+demo/Dashboard/*.*
+demo/Dashboard/dashboard/*.*
+
